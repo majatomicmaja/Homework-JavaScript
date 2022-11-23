@@ -22,11 +22,14 @@ document.querySelector("#loginButton").addEventListener("click", function() {
         password.classList.remove("invalidField");
     }
 
-    if(isPasswordValid == true) {
-        alert("Your email is not valid or it's not supported");
-    } else if(isEmailValid == true) {
-        alert("Your password is not correct")
+    
+    if(isPasswordValid == true && isEmailValid == true) {
+        alert("Welcome");
+    } else if(isEmailValid == false && isPasswordValid == false) {
+        alert("The information you entered is not correct. Please check your email and password and try again.")
+    } else if(isPasswordValid == true) {
+        alert("Your email is not valid or supported.")
     } else {
-        alert("Please check your email and password and try again")
+        alert("Your password is not valid.")
     }
 });
